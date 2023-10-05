@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import Form from 'react-bootstrap/Form';
 
 
 
@@ -15,6 +16,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 export const App = () => {
   return (
     <React.Fragment>
+      {/* navbar */}
       <div className='App'>
           <Navbar expand="lg" className="bg-body-tertiary">
           <Container>
@@ -39,11 +41,14 @@ export const App = () => {
             </Navbar.Collapse>
           </Container>
         </Navbar>
+        {/* heading */}
         <Container fluid="md">
           <Row>
             <Col>heading</Col>
           </Row>
         </Container>
+
+        {/* cards */}
         <Card style={{ width: '18rem' }}>
         <Card.Img variant="top" src="holder.js/100px180" />
         <Card.Body>
@@ -84,6 +89,27 @@ export const App = () => {
         <Button variant="primary">Go somewhere</Button>
       </Card.Body>
       </Card>
+      {/* formulaire */}
+      <Form>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Text className="text-muted">
+          We'll never share your email with anyone else.
+        </Form.Text>
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Label>Password</Form.Label>
+        <Form.Control type="password" placeholder="Password" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="formBasicCheckbox">
+        <Form.Check type="checkbox" label="Check me out" />
+      </Form.Group>
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
 
 
 
